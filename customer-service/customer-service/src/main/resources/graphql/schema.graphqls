@@ -1,0 +1,17 @@
+type Query {
+    allCustomers:[Customers]
+    getCustomer(id:Int):Customers
+}
+type Mutation {
+    saveCustomer(customer : CustomerRequest) : Customers
+}
+
+type Customers {
+id : Int ,
+name : String ,
+email :String
+}
+input CustomerRequest{
+    name: String,
+    email : String
+}
